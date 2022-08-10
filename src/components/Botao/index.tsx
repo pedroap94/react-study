@@ -2,8 +2,13 @@ import React from "react";
 
 class Botao extends React.Component {
     render(): React.ReactNode {
+        const estaAtiva = false;
+        const styles = {
+            backgroundColor: estaAtiva ? "red" : "blue"
+        }
+
         return(
-            <button>
+            <button style={styles}>
                 Botão
             </button>
         )

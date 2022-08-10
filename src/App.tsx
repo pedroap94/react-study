@@ -1,10 +1,13 @@
 import React from 'react';
-import Botao from './components/botao';
+import Botao from './components/Botao';
+import Formulario from './components/Formulario';
+import Lista from './components/Lista';
 
 function App() {
   return (
-    <div className="App" style={{textAlign:'center'}}>
-      <Botao/>
+    <div className="App">
+      <Formulario/>
+      <Lista/>
     </div>
   );
 }
