@@ -2,7 +2,7 @@ import Item from "./Item";
 import style from './Lista.module.scss'
 
 function Lista() {
-    const tarefas = [{
+    let tarefas = [{
         tarefa: 'React',
         tempo: '02:00:00'
     },
@@ -19,7 +19,10 @@ function Lista() {
 
     return (
         <aside className={style.listaTarefas}>
-            <h2> Estudos do dia </h2>
+            <h2 onClick={() => {
+                console.log("h2 clicado")
+                tarefas = [...tarefas, {tarefa: "Estudar estado", tempo: "05:00:00"}]
+            }}> Estudos do dia </h2>
             <ul>
                 {tarefas.map((item, index) => (
                     <Item
